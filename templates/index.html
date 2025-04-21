@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+    <form action="/submit" method="post">
+        {% for q in questions %}
+            <p>{{ q.question }}</p>
+            {% for option in q.options %}
+                <label>
+                    <input type="radio" name="{{ q.question }}" value="{{ option }}" required> {{ option }}
+                </label><br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
