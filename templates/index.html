@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Quiz App</title>
+    <title>Simple Quiz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Simple Quiz</h1>
-    <form action="/submit" method="post">
-        {% for q in questions %}
-            <p>{{ q.question }}</p>
-            {% for option in q.options %}
-                <label>
-                    <input type="radio" name="{{ q.question }}" value="{{ option }}" required> {{ option }}
-                </label><br>
+    <div class="container">
+        <h1>Simple Quiz</h1>
+        <form action="/submit" method="POST">
+            {% for q in questions %}
+                <div class="question">
+                    <p><strong>{{ loop.index }}. {{ q.question }}</strong></p>
+                    {% for option in q.options %}
+                        <label>
+                            <input type="radio" name="{{ q.question }}" value="{{ option }}" required>
+                            {{ option }}
+                        </label>
+                    {% endfor %}
+                </div>
             {% endfor %}
-        {% endfor %}
-        <button type="submit">Submit</button>
-    </form>
+            <input type="submit" value="Submit Answers">
+        </form>
+    </div>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Quiz Results</title>
+    <title>Quiz Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Quiz Completed!</h1>
-    <p>Your score: {{ score }} / {{ total }}</p>
-    <a href="/">Try Again</a>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p class="result">You scored {{ score }} out of {{ total }}</p>
+    </div>
 </body>
 </html>
