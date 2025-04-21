@@ -1,29 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
     text-align: center;
-    padding: 20px;
+    margin-bottom: 30px;
+    color: #2c3e50;
 }
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    margin: auto;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
 }
 
-button {
-    background-color: #28a745;
+.question label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+    transition: background 0.3s ease;
 }
 
-button:hover {
-    background-color: #218838;
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71;
 }
